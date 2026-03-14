@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Dent Multispeciality | Best Dentist in Karimnagar | 5.0 ⭐</title>
     
-    <meta name="description" content="Happy Dent Multispeciality in Karimnagar. Top-rated dental clinic for Root Canal, Implants, and Braces. Experience 5-star dental care. Book your appointment now!">
+    <meta name="description" content="Happy Dent Multispeciality in Karimnagar. Top-rated 5.0 dental clinic for Root Canal, Implants, Braces & Pediatric Dentistry. Book your smile makeover today!">
     
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,257 +13,285 @@
 
     <style>
         :root {
-            --primary: #06b6d4; 
+            --primary: #0ea5e9; 
+            --primary-dark: #0369a1;
             --secondary: #0f172a; 
-            --accent: #22c55e; 
+            --teal: #14b8a6;
             --bg-light: #f8fafc;
             --white: #ffffff;
+            --accent: #fbbf24;
+            --glass: rgba(255, 255, 255, 0.8);
         }
 
+        /* Smooth Reset */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
         html { scroll-behavior: smooth; }
         body { color: var(--secondary); background: var(--white); overflow-x: hidden; line-height: 1.6; }
 
         /* Navigation */
         nav {
-            background: rgba(255, 255, 255, 0.95);
+            background: var(--glass);
             backdrop-filter: blur(15px);
-            padding: 15px 6%;
+            padding: 15px 8%;
             display: flex; justify-content: space-between; align-items: center;
             position: sticky; top: 0; z-index: 1000;
             border-bottom: 1px solid rgba(0,0,0,0.05);
         }
-        .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.2rem; color: var(--secondary); text-decoration: none; }
+        .logo { font-weight: 800; font-size: 1.3rem; color: var(--secondary); text-decoration: none; letter-spacing: -1px; }
         .logo span { color: var(--primary); }
-
-        .nav-links { display: flex; gap: 25px; list-style: none; }
-        .nav-links a { text-decoration: none; color: var(--secondary); font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links { display: flex; gap: 30px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--secondary); font-weight: 600; font-size: 0.95rem; transition: 0.3s; }
         .nav-links a:hover { color: var(--primary); }
 
-        /* Floating Contact Buttons */
-        .float-container { position: fixed; bottom: 25px; right: 20px; z-index: 999; display: flex; flex-direction: column; gap: 12px; }
-        .f-btn { 
-            width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; 
-            color: white; font-size: 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: 0.3s; text-decoration: none;
+        /* Floating Actions */
+        .float-btn {
+            position: fixed; bottom: 30px; right: 25px; z-index: 999;
+            width: 60px; height: 60px; border-radius: 50%;
+            background: #22c55e; color: white; display: flex;
+            align-items: center; justify-content: center; font-size: 30px;
+            box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4); text-decoration: none; transition: 0.3s;
         }
-        .f-wa { background: var(--accent); }
-        .f-call { background: var(--primary); }
-        .f-btn:hover { transform: scale(1.1); }
+        .float-btn:hover { transform: scale(1.1) rotate(10deg); }
 
-        /* Hero Section with Background Image */
+        /* Hero Section */
         #home { 
-            min-height: 85vh; 
-            background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.7)), 
+            min-height: 90vh; 
+            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(240,249,255,0.8) 100%), 
                         url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=2070');
-            background-size: cover;
-            background-position: center;
-            display: flex; align-items: center; padding: 40px 8%;
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; padding: 0 8%;
         }
-        .hero-content { max-width: 700px; }
-        .hero-content h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
+        .hero-content { max-width: 750px; }
+        .hero-content h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 25px; }
         .hero-content h1 span { color: var(--primary); }
-        .hero-content p { font-size: 1.1rem; color: #475569; margin-bottom: 30px; font-weight: 500; }
+        .hero-content p { font-size: 1.2rem; color: #475569; margin-bottom: 35px; }
 
         .rating-badge { 
-            background: #fff; border: 1px solid #e2e8f0; padding: 10px 20px; border-radius: 50px; 
-            display: inline-flex; align-items: center; gap: 10px; margin-bottom: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            background: white; padding: 10px 20px; border-radius: 50px; 
+            display: inline-flex; align-items: center; gap: 10px; margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;
         }
-        .stars { color: #fbbf24; }
+        .stars { color: var(--accent); }
 
         /* Buttons */
-        .btn { padding: 14px 30px; border-radius: 12px; font-weight: 700; text-decoration: none; display: inline-block; transition: 0.3s; border: none; cursor: pointer; }
-        .btn-primary { background: var(--primary); color: white; }
-        .btn-primary:hover { background: var(--secondary); transform: translateY(-3px); }
-        .btn-outline { border: 2px solid var(--primary); color: var(--primary); margin-left: 10px; background: rgba(255,255,255,0.8); }
+        .btn { padding: 16px 32px; border-radius: 14px; font-weight: 700; text-decoration: none; display: inline-block; transition: 0.3s; border: none; cursor: pointer; text-align: center; }
+        .btn-primary { background: var(--primary); color: white; box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3); }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-3px); }
+        .btn-outline { border: 2px solid var(--primary); color: var(--primary); margin-left: 15px; }
+        .btn-outline:hover { background: var(--primary); color: white; }
 
-        /* Services Grid */
-        .section-header { text-align: center; margin-bottom: 60px; }
-        .section-header h2 { font-size: 2.5rem; color: var(--secondary); }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 0 8%; }
-        
-        .service-card { 
-            padding: 30px; border-radius: 20px; background: var(--white); 
-            border: 1px solid #f1f5f9; transition: 0.4s; text-align: left;
-        }
-        .service-card:hover { border-color: var(--primary); transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-        .service-card i { font-size: 2rem; color: var(--primary); margin-bottom: 15px; display: block; }
-        .service-card h3 { margin-bottom: 8px; font-size: 1.1rem; }
-        .service-card p { font-size: 0.9rem; color: #64748b; }
+        /* Section Global */
+        section { padding: 100px 8%; }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 15px; }
+        .section-title p { color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* Booking Form with Background */
-        #booking { 
-            padding: 100px 8%; 
-            background: linear-gradient(rgba(248, 250, 252, 0.9), rgba(248, 250, 252, 0.9)),
-                        url('https://images.unsplash.com/photo-1516549221187-fb9ba49f280b?auto=format&fit=crop&q=80&w=2070');
-            background-size: cover;
+        /* Services Grid (2 Columns Mobile) */
+        .grid-layout { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; 
         }
-        .booking-container { 
-            max-width: 1000px; margin: 0 auto; background: var(--secondary); 
-            border-radius: 30px; overflow: hidden; display: grid; grid-template-columns: 1fr 1.2fr;
+        .card { 
+            background: var(--white); padding: 40px 30px; border-radius: 24px; 
+            border: 1px solid #f1f5f9; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
         }
-        .booking-info { padding: 50px; color: white; }
-        .booking-form { padding: 50px; background: white; }
-        .form-group { margin-bottom: 20px; }
-        input, select, textarea { width: 100%; padding: 15px; border-radius: 10px; border: 1px solid #ddd; outline: none; font-size: 1rem; }
+        .card:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
+        .card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; display: block; }
+        .card h3 { font-size: 1.25rem; margin-bottom: 12px; }
+        .card p { font-size: 0.95rem; color: #64748b; }
 
-        /* Responsive & Mobile Fix for Side-by-Side Cards */
-        @media (max-width: 768px) {
-            nav { padding: 15px 5%; }
+        /* Appointment Form */
+        #appointment { background: var(--secondary); border-radius: 50px; margin: 0 4% 100px; padding: 80px 6%; color: white; }
+        .booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .booking-form { background: white; padding: 40px; border-radius: 30px; color: var(--secondary); }
+        .booking-form input, .booking-form select, .booking-form textarea {
+            width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 12px; border: 1px solid #e2e8f0; font-size: 1rem;
+        }
+
+        /* Contact Section */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .map-frame { height: 400px; border-radius: 30px; overflow: hidden; border: 1px solid #e2e8f0; }
+
+        /* Responsive */
+        @media (max-width: 992px) {
             .nav-links { display: none; }
-            #home { text-align: center; padding: 100px 5% 60px; background-position: right; }
-            .hero-content { margin: 0 auto; }
-            
-            /* Mobile Grid: Side by Side (2 items) */
-            .services-grid { 
-                grid-template-columns: 1fr 1fr; 
-                padding: 0 4%; 
-                gap: 12px; 
-            }
-            .service-card { padding: 20px 15px; }
-            .service-card i { font-size: 1.5rem; }
-            .service-card h3 { font-size: 0.95rem; }
-            .service-card p { display: none; } /* Hide description on mobile to keep it compact */
-            
-            .booking-container { grid-template-columns: 1fr; }
-            .btn-outline { margin-left: 0; margin-top: 10px; width: 100%; }
+            .booking-grid, .contact-grid { grid-template-columns: 1fr; }
+            #home { text-align: center; padding-top: 80px; }
+            .btn-outline { margin-left: 0; margin-top: 15px; width: 100%; }
             .btn-primary { width: 100%; }
+        }
+
+        @media (max-width: 600px) {
+            section { padding: 60px 5%; }
+            /* THE 2-COLUMN MOBILE GRID */
+            .grid-layout { grid-template-columns: 1fr 1fr; gap: 15px; }
+            .card { padding: 20px 15px; }
+            .card i { font-size: 1.8rem; margin-bottom: 10px; }
+            .card h3 { font-size: 0.9rem; line-height: 1.3; }
+            .card p { display: none; } /* Keeping it clean on mobile */
         }
     </style>
 </head>
 <body>
 
-    <div class="float-container">
-        <a href="tel:+919032383952" class="f-btn f-call"><i class="fas fa-phone-alt"></i></a>
-        <a href="https://wa.me/919032383952" class="f-btn f-wa"><i class="fab fa-whatsapp"></i></a>
-    </div>
+    <a href="https://wa.me/919032383952" class="float-btn"><i class="fab fa-whatsapp"></i></a>
 
     <nav>
-        <a href="#" class="logo">HAPPY DENT<span> MULTISPECIALITY</span></a>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <a href="tel:+919032383952" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.8rem;">Emergency Call</a>
+        <a href="#" class="logo">HAPPY DENT<span>  Multispeciality </span></a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#why-us">Why Choose Us</a>
+            <a href="#contact">Contact</a>
+            <a href="tel:+919032383952" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.8rem;">Emergency Call</a>
+        </div>
     </nav>
 
     <section id="home">
         <div class="hero-content" data-aos="fade-right">
             <div class="rating-badge">
-                <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                <span style="font-weight: 700;">5.0 Rating (64+ Reviews)</span>
+                <span class="stars"><i class="fas fa-star"></i> 5.0</span>
+                <span style="font-weight: 700;">(64 Verified Reviews)</span>
             </div>
-            <h1>Your Smile Deserves <br><span>The Best Care.</span></h1>
-            <p>Welcome to Happy Dent Multispeciality, Karimnagar's most trusted dental clinic. We combine international standards with compassionate care.</p>
+            <h1>Your Smile Deserves <span>The Best Care.</span></h1>
+            <p>Welcome to Karimnagar's most trusted multispeciality dental clinic. We combine world-class expertise with a gentle, patient-centered approach.</p>
             <div class="hero-btns">
-                <a href="#booking" class="btn btn-primary">Book Appointment</a>
-                <a href="tel:+919032383952" class="btn btn-outline">Call Us</a>
+                <a href="#appointment" class="btn btn-primary">Book Appointment</a>
+                <a href="tel:+919032383952" class="btn btn-outline">Call Hospital</a>
             </div>
         </div>
     </section>
 
-    <section id="services" style="padding: 100px 0;">
-        <div class="section-header" data-aos="fade-up">
-            <h2>Specialized Dental Services</h2>
-            <p>Advanced treatments for all age groups</p>
+    <section id="services">
+        <div class="section-title" data-aos="fade-up">
+            <p>Expertise</p>
+            <h2>Dental Services</h2>
         </div>
-        <div class="services-grid">
-            <div class="service-card" data-aos="zoom-in">
+        <div class="grid-layout">
+            <div class="card" data-aos="zoom-in">
                 <i class="fas fa-tooth"></i>
                 <h3>Root Canal</h3>
-                <p>Painless RCT using modern technology to save your teeth.</p>
+                <p>Advanced painless RCT to save your natural teeth.</p>
             </div>
-            <div class="service-card" data-aos="zoom-in" data-aos-delay="50">
-                <i class="fas fa-grin-stars"></i>
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fas fa-wand-magic-sparkles"></i>
                 <h3>Whitening</h3>
-                <p>Professional whitening for a movie-star smile in one visit.</p>
+                <p>Professional teeth whitening for a movie-star smile.</p>
             </div>
-            <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
-                <i class="fas fa-implants"></i>
-                <h3>Implants</h3>
-                <p>Permanent and stable solutions for missing teeth.</p>
-            </div>
-            <div class="service-card" data-aos="zoom-in" data-aos-delay="150">
-                <i class="fas fa-child"></i>
-                <h3>Kids Dental</h3>
-                <p>Gentle and friendly dental care for your little ones.</p>
-            </div>
-            <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
-                <i class="fas fa-magic"></i>
-                <h3>Smile Design</h3>
-                <p>Custom cosmetic procedures to enhance your confidence.</p>
-            </div>
-            <div class="service-card" data-aos="zoom-in" data-aos-delay="250">
+            <div class="card" data-aos="zoom-in" data-aos-delay="200">
                 <i class="fas fa-shield-virus"></i>
-                <h3>Cleaning</h3>
-                <p>Complete ultrasonic cleaning to maintain high hygiene.</p>
+                <h3>Dental Implants</h3>
+                <p>Permanent and secure solutions for missing teeth.</p>
+            </div>
+            <div class="card" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fas fa-baby"></i>
+                <h3>Pediatric Care</h3>
+                <p>Compassionate dental care specially for children.</p>
+            </div>
+            <div class="card" data-aos="zoom-in">
+                <i class="fas fa-align-center"></i>
+                <h3>Braces</h3>
+                <p>Align your teeth with ceramic or invisible braces.</p>
+            </div>
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fas fa-notes-medical"></i>
+                <h3>Extractions</h3>
+                <p>Safe and painless tooth removal procedures.</p>
             </div>
         </div>
     </section>
 
-    <section id="booking">
-        <div class="booking-container" data-aos="flip-up">
-            <div class="booking-info">
-                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Schedule Your Visit</h2>
-                <p style="color: #94a3b8; margin-bottom: 40px;">Fill the form, and our coordinator will confirm your slot via WhatsApp.</p>
-                <div style="margin-bottom: 20px;"><i class="fas fa-clock" style="margin-right: 10px;"></i> Mon-Sat: 10:00 AM - 8:30 PM</div>
-                <div><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Civil Hospital Road, Karimnagar</div>
+    <section id="why-us" style="background: var(--bg-light);">
+        <div class="section-title">
+            <p>Trust</p>
+            <h2>Why Choose Happy Dent</h2>
+        </div>
+        <div class="grid-layout">
+            <div class="card">
+                <i class="fas fa-user-md" style="color: var(--teal);"></i>
+                <h3>Experts</h3>
             </div>
-            <div class="booking-form">
-                <form id="appointmentForm">
-                    <div class="form-group"><input type="text" id="name" placeholder="Full Name" required></div>
-                    <div class="form-group"><input type="tel" id="phone" placeholder="Phone Number" required></div>
-                    <div class="form-group">
-                        <select id="service_type">
-                            <option>General Checkup</option>
-                            <option>Root Canal</option>
-                            <option>Teeth Whitening</option>
-                            <option>Dental Implants</option>
-                        </select>
-                    </div>
-                    <div class="form-group"><input type="date" id="date" required></div>
+            <div class="card">
+                <i class="fas fa-microscope" style="color: var(--teal);"></i>
+                <h3>Modern Tech</h3>
+            </div>
+            <div class="card">
+                <i class="fas fa-pump-medical" style="color: var(--teal);"></i>
+                <h3>Sterilized</h3>
+            </div>
+            <div class="card">
+                <i class="fas fa-wallet" style="color: var(--teal);"></i>
+                <h3>Affordable</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="appointment">
+        <div class="booking-grid">
+            <div data-aos="fade-up">
+                <h2 style="font-size: 3rem; margin-bottom: 20px;">Schedule Your Visit</h2>
+                <p style="color: #cbd5e1; margin-bottom: 30px;">Take the first step towards a healthier smile. Our coordinator will call you back to confirm your slot.</p>
+                <div style="display: flex; gap: 20px; font-size: 1.1rem;">
+                    <p><i class="fas fa-check-circle" style="color: var(--teal);"></i> 100% Sterile</p>
+                    <p><i class="fas fa-check-circle" style="color: var(--teal);"></i> Certified Team</p>
+                </div>
+            </div>
+            <div class="booking-form" data-aos="fade-left">
+                <form id="waForm">
+                    <input type="text" id="name" placeholder="Full Name" required>
+                    <input type="tel" id="phone" placeholder="Phone Number" required>
+                    <select id="service">
+                        <option>Root Canal</option>
+                        <option>Teeth Whitening</option>
+                        <option>Dental Implants</option>
+                        <option>General Checkup</option>
+                    </select>
+                    <input type="date" required>
+                    <textarea placeholder="Message (Optional)" rows="3"></textarea>
                     <button type="submit" class="btn btn-primary" style="width: 100%;">Book via WhatsApp</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <section id="contact" style="padding: 100px 8%;">
-        <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+    <section id="contact">
+        <div class="contact-grid">
             <div data-aos="fade-right">
-                <h2 style="font-size: 2rem; margin-bottom: 25px;">Reach Us</h2>
-                <p><strong>Address:</strong><br>3-3-93/1, Civil Hospital Road, Sawaran St, Karimnagar, Telangana 505001</p>
-                <p style="margin-top: 15px;"><strong>Phone:</strong><br>+91 90323 83952</p>
-                <div style="margin-top: 30px;">
-                    <a href="https://goo.gl/maps/YOUR_LINK" class="btn btn-primary">Get Directions</a>
+                <h2>Visit Our Clinic</h2>
+                <p style="margin: 20px 0; color: #64748b;">3-3-93/1, Civil Hospital Road, Sawaran St, Karimnagar, Telangana 505001, India</p>
+                <p><strong>Hours:</strong> 10:00 AM - 9:00 PM</p>
+                <div style="margin-top: 30px; display: flex; gap: 15px;">
+                    <a href="tel:+919032383952" class="btn btn-primary"><i class="fas fa-phone"></i> Call Clinic</a>
+                    <a href="https://maps.app.goo.gl/9qyWdrFpaAryoq2L9" class="btn btn-outline" target="_blank">Get Directions</a>
                 </div>
             </div>
-            <div style="height: 350px; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" data-aos="fade-left">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3790.627705193635!2d79.1257128!3d18.4323605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bccd90ed0693a11%3A0x6b490422c5478f77!2sSawaran%20Street%2C%20Karimnagar!5e0!3m2!1sen!2sin!4v1625000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="map-frame" data-aos="fade-left">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.123456789!2d79.1321!3d18.4385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDI2JzE4LjYiTiA3OcKwMDcnNTUuNiJF!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
-    <footer style="background: var(--secondary); color: white; padding: 60px 8% 20px; text-align: center;">
-        <h2 style="margin-bottom: 20px;">Happy Dent Multispeciality</h2>
-        <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 40px; font-size: 1.2rem;">
-            <i class="fab fa-facebook"></i><i class="fab fa-instagram"></i><i class="fab fa-google"></i>
+    <footer style="background: var(--secondary); color: #94a3b8; padding: 60px 8% 30px; text-align: center;">
+        <h2 style="color: white; margin-bottom: 10px;">Happy Dent Multispeciality</h2>
+        <p>Karimnagar's Leading Dental Hospital</p>
+        <div style="margin: 30px 0; display: flex; justify-content: center; gap: 20px;">
+            <a href="#" style="color: white; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+            <a href="#" style="color: white; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+            <a href="tel:+919032383952" style="color: white; font-size: 1.5rem;"><i class="fas fa-phone"></i></a>
         </div>
-        <p style="font-size: 0.8rem; color: #64748b;">© 2026 Happy Dent Multispeciality | Karimnagar. All Rights Reserved.</p>
+        <p style="font-size: 0.8rem; border-top: 1px solid #1e293b; padding-top: 20px;">&copy; 2026 Happy Dent Multispeciality | All Rights Reserved.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
 
-        document.getElementById('appointmentForm').onsubmit = function(e) {
+        document.getElementById('waForm').onsubmit = function(e) {
             e.preventDefault();
             const name = document.getElementById('name').value;
-            const service = document.getElementById('service_type').value;
-            const date = document.getElementById('date').value;
-            const msg = `Hello Happy Dent! I'm ${name}. I want to book an appointment for ${service} on ${date}.`;
-            window.open(`https://wa.me/919032383952?text=${encodeURIComponent(msg)}`);
+            const service = document.getElementById('service').value;
+            const message = `Hello Happy Dent, I am ${name}. I want to book an appointment for ${service}.`;
+            window.open(`https://wa.me/919032383952?text=${encodeURIComponent(message)}`);
         };
     </script>
 </body>
